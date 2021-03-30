@@ -55,3 +55,9 @@ iptables -A FORWARD -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEP
 iptables -A FORWARD -p tcp --sport 443 -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -p tcp --dport 25 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -p tcp --sport 25 -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+iptables -A FORWARD -p tcp -i eth0 -o eth1 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -p tcp -i eth1 -o eth0 --sport 22 -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+iptables -A FORWARD -p tcp -i eth0 -o eth2 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -p tcp -i eth2 -o eth0 --sport 22 -m state --state ESTABLISHED,RELATED -j ACCEPT
