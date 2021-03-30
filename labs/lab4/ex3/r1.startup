@@ -48,6 +48,7 @@ iptables -P INPUT DROP
 iptables -P OUTPUT DROP
 iptables -P FORWARD DROP
 
+
 iptables -A FORWARD -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -p tcp --sport 80 -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
