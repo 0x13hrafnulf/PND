@@ -1,3 +1,5 @@
+dpkg -i /var/cache/apt/archives/*.deb
+
 ip addr add 203.0.113.25/24 dev eth0
 ip route add default via 203.0.113.1
 ip addr add 2001:db8:cafe:2::25/64 dev eth0

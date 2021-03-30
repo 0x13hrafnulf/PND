@@ -18,7 +18,7 @@ Your security policy is as follows:
   DMZ can initiate connections anywhere else.
 
 3.Internal users can access the Web servers and mail servers in DMZ via SSH,
-  too. They can alsouse SSH to hosts on the Internet. However, hosts in
+  too. They can also use SSH to hosts on the Internet. However, hosts in
   DMZ can only be contacted on port 22 by hosts in the internal lan.
 
 NOTE: if you obtain the error "Table does not exist (do you need 
