@@ -12,3 +12,9 @@ a MITM attack. Bettercap does this with the ARP poisoning
 
 - Try to use inject the http-proxy-pwned.js javascript for altering
   HTTP responses coming from the webserver (see/use caplet proxyspoof.cap)
+
+
+Solution:
+> ./connect-lab-ip.sh 192.168.100.200/24 kathara_"username"_A
+> Unzip bettercap in a1 and start it // Bettercap usage: https://www.bettercap.org/usage/
+> Check proxyspoof.cap, do commands one by one or use it as script for script mode in Bettercap

