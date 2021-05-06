@@ -16,3 +16,6 @@ dpkg -i /shared/*.deb
 
 #Run
 #openvpn --config r2.conf
+
+
+#2nd part with dynamic keys and CA
